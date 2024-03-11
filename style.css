@@ -39,27 +39,16 @@ body {
   background-color: var(--backgroundColor);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   color: var(--textColor);
 }
 
-h1 {
-  font-size: 3.2rem;
-}
-h2 {
+h1, h2 {
   font-size: 3.2rem;
 }
 
-p,
-li,
-a,
-label {
+p, li, a, label {
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
   color: var(--para-color);
@@ -157,9 +146,7 @@ a {
   cursor: pointer;
 }
 
-.btn:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
+.btn:focus-visible, input:focus-visible, textarea:focus-visible {
   outline: 2px solid var(--para-color);
 }
 
@@ -236,7 +223,7 @@ textarea:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem; /* we override the main container padding property  */
+  padding: 1.5rem; /* we override the main container padding property  */
 }
 
 .section-navbar img {
@@ -281,7 +268,7 @@ textarea:focus-visible {
 /***** Hero Section *****/
 
 main {
-  height: 84vh;
+  height: 80vh;
   position: relative;
   background-color: #d9e9ff;
 
@@ -317,7 +304,7 @@ main {
 }
 
 main .section-hero {
-  height: 90vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,7 +327,7 @@ main .section-hero {
   }
 
   & .hero-heading {
-    font-size: 5.8rem;
+    font-size: 4.5rem;
     line-height: 1.5;
     initial-letter: -0.2rem;
     text-transform: capitalize;
