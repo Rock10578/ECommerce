@@ -451,7 +451,8 @@ main .section-hero {
 }
 
 .div-policy {
-  /* padding: 0 1rem; */
+  padding: 0 1rem;
+  /* padding-left: 1rem; */
   display: flex;
   align-items: center;
   gap: 1.2rem;
