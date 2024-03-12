@@ -181,6 +181,65 @@
     </section>
     <!-- ========== End policy ========== -->
 
+
+    <!-- ========== Start Product Section ========== -->
+    <section class="section-products">
+      <div class="container">
+        <h2 class="section-common-heading">Checkout Rock Store</h2>
+      </div>
+      <section class="container">
+        <div id="productContainer"></div>
+      </section>
+    </section>
+
+    
+    <!-- ========== Start Product Template Section ========== -->
+    <template id="productTemplate">
+      <div class="cards" id="cardValue">
+        <article class="information [card]" style="max-width: 250px;">
+          <span class="category"></span>
+          <div class="imageContainer">
+            <img class="productImage" src="" alt=""/>
+          </div>
+          <h2 class="productName" style="font-size: 2.6rem;"></h2>
+          <div class="productRating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="productDescription"></p>
+          <div class="productPriceElement">
+            <p class="productPrice"></p>
+            <p class="productActualPrice"></p>
+          </div>
+
+          <div class="productStockElement">
+            <p class="productProperty">Total Stocks Available:</p>
+            <p class="productStock"></p>
+          </div>
+
+          <div class="productQuantityElement">
+            <p class="productProperty">Quantity(Pieces)</p>
+            <div class="stockElement">
+              <button class="cartDecrement">-</button>
+              <p class="productQuantity">1</p>
+              <button class="cartIncrement">+</button>
+            </div>
+          </div>
+
+          <button class="add-to-cart-button">
+            <i class="fa-solid fa-cart-shoppong"></i>Add To Cart
+          </button>
+        </article>
+      </div>
+    </template>
+    <!-- ========== End Product Template Section ========== -->
+    
+    <!-- ========== End Product Section ========== -->
+
     <!-- ========== Start Why Choose Us Section ========== -->
     <section class="section-why--choose">
       <div class="container">
@@ -326,5 +385,7 @@
       </div>
     </footer>
     <!-- ========== End footer Section ========== -->
+  
+  <script type="module" src="main.js"></script>
   </body>
 </html>
