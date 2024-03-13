@@ -1,5 +1,7 @@
 import products from "./api/products.json";
+import { fetchQuantityfromCartLS } from "./fetchQuantityfromCartLS";
 import { getCartProductFromLS } from "./getCartProductFromLS";
+import { removeProductFromCart } from "./removeProductFromCart";
 
 let cartProducts = getCartProductFromLS();
 
@@ -16,11 +18,17 @@ const showCartProduct = () => {
         const { category, id, image, name, stock, price } = curProd;
         let productClone = document.importNode(templateContainer.content, true);
 
+        const lSActualData = fetchQuantityfromCartLS(id, price);
+
         productClone.querySelector('#cardValue').setAttribute("id",`card${id}`);
         productClone.querySelector(".category").textContent = category;
         productClone.querySelector(".productName").textContent = name;
         productClone.querySelector(".productImage").src = image;
         productClone.querySelector(".productPrice").textContent = price;
+        productClone.querySelector(".productPrice").textContent = lSActualData.price;
+        productClone.querySelector(".productQuantity").textContent = lSActualData.quantity;
+
+        productClone.querySelector('.remove-to-cart-button').addEventListener('click', () => removeProductFromCart(id));
 
         cardElement.appendChild(productClone);
     })
