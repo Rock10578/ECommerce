@@ -13,6 +13,15 @@ export const addToCart = (event , id, stock) => {
     
     let existingProd = arrLocalStorageProduct.find((curProd) => curProd.id === id);
     if (existingProd) {
+        if (quantity > 1){
+            quantity = existingProd.quantity + quantity
+            price = Number(price.replace('₹','')*quantity);
+            let updatedCart = { id, quantity, price };
+            updatedCart = arrLocalStorageProduct.map((curProd) => {
+                return curProd.id === id ? updatedCart : curProd;
+            });
+            localStorage.setItem("cartProductLS", JSON.stringify(updatedCart))
+        }
         return false;
     }
     
