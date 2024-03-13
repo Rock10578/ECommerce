@@ -3,6 +3,7 @@ import { fetchQuantityfromCartLS } from "./fetchQuantityfromCartLS";
 import { getCartProductFromLS } from "./getCartProductFromLS";
 import { incrementDecrement } from "./incrementDecrement";
 import { removeProductFromCart } from "./removeProductFromCart";
+import { updateCartProductTotal } from "./updateCartProductTotal";
 
 let cartProducts = getCartProductFromLS();
 
@@ -40,3 +41,5 @@ const showCartProduct = () => {
 }
 
 showCartProduct();
+
+updateCartProductTotal();
