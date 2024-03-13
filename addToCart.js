@@ -1,4 +1,5 @@
 import { getCartProductFromLS } from "./getCartProductFromLS";
+import { updateCartValue } from "./updateCartValue";
 
 export const addToCart = (event , id, stock) => {
     
@@ -11,4 +12,7 @@ export const addToCart = (event , id, stock) => {
 
     arrLocalStorageProduct.push({id, quantity, price})
     localStorage.setItem("cartProductLS", JSON.stringify(arrLocalStorageProduct))
+
+    // update the cart with number of different product clicked
+    updateCartValue(arrLocalStorageProduct);
 }
