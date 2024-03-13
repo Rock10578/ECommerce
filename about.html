@@ -1,15 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <title>ECommerce</title>
+    <title>JavaScript eCommerce</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Jost:wght@300;400;500;700&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    /> -->
   </head>
   <body>
-    <!-- ================ Start Navbar Section ================ -->
+
+    <!-- ========== Start Navbar ========== -->
     <header class="section-navbar">
       <section class="top_txt">
         <div class="head container">
@@ -45,7 +60,7 @@
         </div>
       </div>
     </header>
-    <!-- ================ End Navbar Section ================ -->
+    <!-- ========== End Navbar ========== -->
 
     <!-- ================ Start Home Hero Section ================ -->
     <main>
@@ -102,7 +117,7 @@
         <div class="div-extra grid grid-two--cols">
           <div class="extra-text">
             <p>new year sale</p>
-            <h3>get an extra 50% off</h3>
+            <h3>get and extra 50% off</h3>
             <a href="#">Show now</a>
           </div>
           <div class="extra-img extra-laptop">
@@ -120,11 +135,10 @@
             <img src="./images/headphoneEcom.png" alt="" />
           </div>
         </div>
-
         <div class="div-extra grid grid-two--cols">
           <div class="extra-text">
             <p>new year sale</p>
-            <h3>get an extra 50% off</h3>
+            <h3>get and extra 50% off</h3>
             <a href="#">Show now</a>
           </div>
           <div class="extra-img">
@@ -136,6 +150,7 @@
     <!-- ========== End Extra Product Section ========== -->
 
     <!-- ========== Start policy ========== -->
+
     <section class="section-policy">
       <div class="container grid grid-four--cols">
         <div class="div-policy">
@@ -179,66 +194,8 @@
         </div>
       </div>
     </section>
-    <!-- ========== End policy ========== -->
 
-
-    <!-- ========== Start Product Section ========== -->
-    <section class="section-products">
-      <div class="container" style="margin-top: 20px;">
-        <h2 class="section-common-heading">Checkout Rock Store</h2>
-      </div>
-      <section class="container">
-        <div id="productContainer"></div>
-      </section>
-    </section>
-
-    
-    <!-- ========== Start Product Template Section ========== -->
-    <template id="productTemplate">
-      <div class="cards" id="cardValue">
-        <article class="information [card]" style="max-width: 250px;">
-          <span class="category"></span>
-          <div class="imageContainer">
-            <img class="productImage" src="" alt=""/>
-          </div>
-          <h2 class="productName" style="font-size: 2.6rem;"></h2>
-          <div class="productRating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-
-          <p class="productDescription"></p>
-          <div class="productPriceElement">
-            <p class="productPrice"></p>
-            <p class="productActualPrice"></p>
-          </div>
-
-          <div class="productStockElement">
-            <p class="productProperty">Total Stocks Available:</p>
-            <p class="productStock"></p>
-          </div>
-
-          <div class="productQuantityElement">
-            <p class="productProperty">Quantity(Pieces)</p>
-            <div class="stockElement">
-              <button class="cartDecrement">-</button>
-              <p class="productQuantity">1</p>
-              <button class="cartIncrement">+</button>
-            </div>
-          </div>
-
-          <button class="add-to-cart-button">
-            <i class="fa-solid fa-cart-shoppong"></i>Add To Cart
-          </button>
-        </article>
-      </div>
-    </template>
-    <!-- ========== End Product Template Section ========== -->
-    
-    <!-- ========== End Product Section ========== -->
+    <!--? ========== End policy ========== -->
 
     <!-- ========== Start Why Choose Us Section ========== -->
     <section class="section-why--choose">
@@ -344,6 +301,7 @@
     <!-- ========== End Why Choose Us Section ========== -->
 
     <!-- ========== Start footer Section ========== -->
+    
     <footer class="section-footer">
       <div class="footer-container container">
         <div class="content_1">
@@ -384,8 +342,15 @@
         </div>
       </div>
     </footer>
+
     <!-- ========== End footer Section ========== -->
-  
-  <script type="module" src="main.js"></script>
+
+    <script type="module" src="/main.js"></script>
+
+    <!-- JS SCRIPT  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
