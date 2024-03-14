@@ -38,5 +38,5 @@ export const addToCart = (event, id, stock, name) => {
     // update the cart with number of different product clicked
     updateCartValue(arrLocalStorageProduct);
 
-    showToast("add",id);
+    showToast("add",name);
 }

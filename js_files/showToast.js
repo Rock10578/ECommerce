@@ -4,7 +4,7 @@ export function showToast(operation, name){
 
     if (operation === "add"){
         toast.textContent = `${name} has been added to your cart`;
-    } else if (operation === "notAvailable") {
+    } else if (operation === "delete") {
         toast.textContent = `${name} has been deleted from your cart`;
     } else if (operation === "max"){
         toast.textContent = `More ${name} will be added soon..`;

@@ -35,7 +35,7 @@ const showCartProduct = () => {
             incrementDecrement(event, id, stock, price);
         });
 
-        productClone.querySelector('.remove-to-cart-button').addEventListener('click', () => removeProductFromCart(id));
+        productClone.querySelector('.remove-to-cart-button').addEventListener('click', () => removeProductFromCart(id, name));
 
         cardElement.appendChild(productClone);
     })

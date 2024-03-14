@@ -182,7 +182,7 @@ a {
   }
   20% {
     transform: translateX(0);
-    opacity: 0.5;
+    opacity: 0.8;
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
