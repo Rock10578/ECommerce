@@ -19,10 +19,8 @@ const showCartProduct = () => {
     filterProducts.forEach((curProd) => {
         const { category, id, image, name, stock, price } = curProd;
         let productClone = document.importNode(templateContainer.content, true);
-        console.log("Price of element : ",price);
 
         const localStorageData = fetchQuantityfromCartLS(id, price);
-        // console.log("Data from local storage : ",lsdata.price,lsdata.quantity);
 
         productClone.querySelector('#cardValue').setAttribute("id",`card${id}`);
         productClone.querySelector(".category").textContent = category;
