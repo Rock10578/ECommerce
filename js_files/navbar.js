@@ -25,8 +25,8 @@ const navbarHTML = `
         <div class="navbar">
           <ul>
             <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="/products.html" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
             <li class="nav-item"><a href="/addToCart.html" class="nav-link add-to-cart-button" id="cartValue"><i class="fa-solid fa-cart-arrow-down">0</i></a></li>
           </ul>

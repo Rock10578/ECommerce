@@ -846,6 +846,7 @@ footer {
 .add-to-cart-button,
 .contact-btn,
 .hero-btn a {
+  cursor: pointer;
   font-weight: 500;
   font: inherit;
   border-radius: 6px;
@@ -977,6 +978,16 @@ footer {
 }
 
 /*****  Add to Cart page ends *****/
+
+/***** Button styling starts *****/
+
+.cartButton{
+  display: flex;
+  justify-content: space-between;
+}
+
+/***** Button styling starts *****/
+
 
 /*****  media queries Section *****/
 
