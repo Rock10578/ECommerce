@@ -6,8 +6,8 @@ export function showToast(operation, name){
         toast.textContent = `${name} has been added to your cart`;
     } else if (operation === "notAvailable") {
         toast.textContent = `${name} has been deleted from your cart`;
-    } else if (operation === "notAvailable"){
-        toast.textContent = `${name} Out Of Stock`;
+    } else if (operation === "max"){
+        toast.textContent = `More ${name} will be added soon..`;
     }
     document.body.appendChild(toast);
     setTimeout(function() {

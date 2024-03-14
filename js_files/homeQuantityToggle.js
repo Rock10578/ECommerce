@@ -2,8 +2,6 @@ export const homeQuantityToggle = (event, id, stock) =>{
 
     const currentCardElement = document.querySelector(`#card${id}`);
     const productQuantity = currentCardElement.querySelector(".productQuantity");
-    console.log("data :",productQuantity);
-    console.log("home quantity : ",productQuantity);
     let quantity = parseInt(productQuantity.getAttribute('data-quantity')) || 0;
 
     if (event.target.className === "cartIncrement"){

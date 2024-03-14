@@ -1,4 +1,4 @@
-import products from "./api/products.json";
+import products from "../api/products.json";
 import { fetchQuantityfromCartLS } from "./fetchQuantityfromCartLS";
 import { getCartProductFromLS } from "./getCartProductFromLS";
 import { incrementDecrement } from "./incrementDecrement";
@@ -19,16 +19,17 @@ const showCartProduct = () => {
     filterProducts.forEach((curProd) => {
         const { category, id, image, name, stock, price } = curProd;
         let productClone = document.importNode(templateContainer.content, true);
+        console.log("Price of element : ",price);
 
-        const lSActualData = fetchQuantityfromCartLS(id, price);
+        const localStorageData = fetchQuantityfromCartLS(id, price);
+        // console.log("Data from local storage : ",lsdata.price,lsdata.quantity);
 
         productClone.querySelector('#cardValue').setAttribute("id",`card${id}`);
         productClone.querySelector(".category").textContent = category;
         productClone.querySelector(".productName").textContent = name;
         productClone.querySelector(".productImage").src = image;
-        productClone.querySelector(".productPrice").textContent = price;
-        productClone.querySelector(".productPrice").textContent = lSActualData.price;
-        productClone.querySelector(".productQuantity").textContent = lSActualData.quantity;
+        productClone.querySelector(".productPrice").textContent = localStorageData.price;
+        productClone.querySelector(".productQuantity").textContent = localStorageData.quantity;
 
         productClone.querySelector(".stockElement").addEventListener('click', (event) => {
             incrementDecrement(event, id, stock, price);
