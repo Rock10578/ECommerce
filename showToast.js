@@ -4,8 +4,10 @@ export function showToast(operation, name){
 
     if (operation === "add"){
         toast.textContent = `${name} has been added to your cart`;
-    }else {
+    } else if (operation === "notAvailable") {
         toast.textContent = `${name} has been deleted from your cart`;
+    } else if (operation === "notAvailable"){
+        toast.textContent = `${name} Out Of Stock`;
     }
     document.body.appendChild(toast);
     setTimeout(function() {

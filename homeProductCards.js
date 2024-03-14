@@ -1,4 +1,5 @@
 import { addToCart } from "./addToCart";
+import { getCartProductFromLS } from "./getCartProductFromLS";
 import { homeQuantityToggle } from "./homeQuantityToggle";
 
 const productContainer = document.querySelector("#productContainer");
@@ -33,5 +34,13 @@ export const showProductContainer = (products) => {
         })
 
         productContainer.append(productClone)
+    });
+
+    let localStorage = getCartProductFromLS();
+    localStorage.forEach((curProd) => {
+        const { id, quantity } = curProd
+        const curCard = document.querySelector(`#card${id}`);
+        const prodQuan = curCard.querySelector(".productQuantity");
+        prodQuan.innerText = quantity;
     })
 }

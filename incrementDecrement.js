@@ -6,7 +6,7 @@ export const incrementDecrement = (event, id, stock, price ) => {
     const productQuantity = currentCardElement.querySelector(".productQuantity");
     const productPrice = currentCardElement.querySelector(".productPrice");
 
-    let quantity = 1;
+    let quantity = 0;
     let localStoragePrice = 0;
 
     let localCartProducts = getCartProductFromLS();

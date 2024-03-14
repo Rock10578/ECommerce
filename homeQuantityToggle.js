@@ -1,8 +1,11 @@
+import { getCartProductFromLS } from "./getCartProductFromLS";
+
 export const homeQuantityToggle = (event, id, stock) =>{
 
     const currentCardElement = document.querySelector(`#card${id}`);
     const productQuantity = currentCardElement.querySelector(".productQuantity");
-    let quantity = parseInt(productQuantity.getAttribute('data-quantity')) || 1;
+    let quantity = parseInt(productQuantity.getAttribute('data-quantity')) || 0;
+
     if (event.target.className === "cartIncrement"){
         if (quantity < stock){
             quantity += 1;
