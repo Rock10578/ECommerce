@@ -41,6 +41,7 @@ export const showProductContainer = (products) => {
         const { id, quantity } = curProd
         const curCard = document.querySelector(`#card${id}`);
         const prodQuan = curCard.querySelector(".productQuantity");
+        prodQuan.setAttribute('data-quantity', quantity);
         prodQuan.innerText = quantity;
     })
 }
