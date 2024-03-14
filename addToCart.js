@@ -4,7 +4,7 @@ import { updateCartValue } from "./updateCartValue";
 
 getCartProductFromLS()
 
-export const addToCart = (event , id, stock) => {
+export const addToCart = (event , id, stock, name) => {
     
     let arrLocalStorageProduct = getCartProductFromLS();
     
@@ -23,7 +23,7 @@ export const addToCart = (event , id, stock) => {
             });
             localStorage.setItem("cartProductLS", JSON.stringify(updatedCart))
         }
-        showToast("add",id);
+        showToast("add",name);
         return false;
     }
     
