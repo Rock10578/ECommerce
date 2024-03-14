@@ -989,6 +989,27 @@ footer {
 /***** Button styling starts *****/
 
 
+/***** Bill Box Styling Starts *****/
+
+.bill-box{
+  border: var(--buttonColor);
+  height: 400px;
+  width: 800px;
+  border-style: double;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & h2{
+    /* display: flex; */
+    text-align: center;
+    font-size: 50px;
+    /* justify-content: center; */
+  }
+}
+
+/***** Bill Box Styling Ends *****/
+
 /*****  media queries Section *****/
 
 /* https://getbootstrap.com/docs/5.0/layout/breakpoints/ */

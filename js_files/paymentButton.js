@@ -1,5 +1,5 @@
 function Bill() {
-    window.location.href = './index.html';
+    window.location.href = './bill.html';
 }
 
 document.getElementById('paymentButtonClicked').addEventListener('click', Bill);
